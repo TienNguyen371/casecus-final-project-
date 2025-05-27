@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Casecus: Search - <%= query %>
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Header -->
+  <%- include('header', { title: "Casecus Product Search" ,
+    subtitle: "Find your perfect case from our stylish collection" , user: session.user }) %>
+
+
+    <!-- Main content -->
+    <main class="container py-5 flex-fill">
+      <h3 class="mb-4 text-center">Search Results for: "<span class="text-primary">
+          <%= query %>
+        </span>"</h3>
+
+      <% if (results.length===0) { %>
+        <div class="alert alert-warning text-center">No products found matching your search.</div>
+        <% } else { %>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+            <% results.forEach(p=> { %>
+              <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                  <img src="/Productimage/<%= p.image || 'default.png' %>" class="card-img-top img-fluid p-3" alt="<%= p.name %>">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <%= p.name %>
+                    </h5>
+                    <p class="card-text">
+                      <%= p.description %>
+                    </p>
+                  </div>
+                  <div class="card-footer border-0 bg-dark text-center">
+                    <p class="fw-bold fs-5 mb-2 text-white">$<%= Number(p.price).toFixed(2) %>
+                    </p>
+                    <a href="/<%= p.name.toLowerCase().replace(/\s+/g, '') %>" class="btn btn-outline-light btn-sm">
+                      View Product Page →
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <% }) %>
+          </div>
+          <% } %>
+
+            <div class="mt-5 text-center">
+              <a href="/productpage.html" class="btn btn-outline-secondary">← Back to Product Page</a>
+            </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-dark text-white text-center py-4">
+      <div class="container">
+        <p class="mb-1">&copy; 2025 Casecus. All rights reserved.</p>
+        <p class="mb-0">Contact us: <a href="mailto:support@casecus.com"
+            class="text-white text-decoration-underline">support@casecus.com</a></p>
+      </div>
+    </footer>
+
+</body>
+
+</html>

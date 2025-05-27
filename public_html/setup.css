@@ -1,0 +1,291 @@
+html {
+    scroll-padding-top: 200px;
+}
+
+.caseus-navbar {
+    background-color: #1b1b1b;
+}
+
+.caseus-navbar .nav-link {
+    color: #fff !important;
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+.caseus-navbar .nav-link:hover {
+    color: #aaa !important;
+}
+
+#searchBar {
+    background-color: #000;
+    overflow: hidden;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    padding: 0;
+    display: none;
+    text-align: center;
+    transition: height 0.4s ease, padding 0.4s ease;
+    z-index: 1055;
+}
+
+#searchBar.show {
+    height: 100px;
+    padding: 30px;
+    display: block;
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 24px;
+    width: 60%;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+
+#searchBar input:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: white;
+}
+
+body {
+    min-height: 1500px;
+}
+
+.image-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 1rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.image-row {
+    display: inline-flex;
+    gap: 1rem;
+}
+
+.feature-img {
+    height: 500px;
+    width: auto;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature-img:hover {
+    transform: scale(1.05);
+}
+
+
+.product-image {
+    max-width: 100%;
+    border-radius: 0.5rem;
+}
+
+.product-detail {
+    padding: 40px 20px;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.color-option {
+    margin-bottom: 15px;
+}
+
+.btn-add {
+    background-color: #000;
+    color: #fff;
+    border-radius: 0;
+    padding: 10px 30px;
+    font-weight: 500;
+}
+
+.btn-add:hover {
+    background-color: #333;
+}
+
+.social-icons img {
+    width: 28px;
+    margin-right: 10px;
+}
+
+.breadcrumb {
+    background: none;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+.hero-section {
+    background-image: url('Productimage/background.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.about-us-section {
+    background-color: #f8f9fa;
+}
+
+.map-container {
+    width: 100%;
+    margin: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.contact-card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.extra-info {
+    font-size: 0.9rem;
+    color: #333;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin-top: 10px;
+}
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-container {
+    position: relative;
+}
+
+
+.brand-layout-section {
+    background-color: black;
+    padding: 150px 40px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    min-height: 100vh;
+}
+
+.brand-layout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.left-img img,
+.small-img img {
+    background-color: transparent;
+    border-radius: 12px;
+    z-index: 2;
+}
+
+.left-img img {
+    height: 300px;
+    object-fit: contain;
+}
+
+.logo-image {
+    height: 80px;
+    width: auto;
+    z-index: 3;
+}
+
+.right-img-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 120px;
+    height: auto;
+}
+
+.small-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.small-img img {
+    max-height: 300px;
+    width: auto;
+    object-fit: contain;
+    background-color: black;
+    border-radius: 12px;
+}
+
+
+.scroll-char-fade {
+  font-size: 2rem;
+  line-height: 2.0rem;
+  text-align: justify;
+  text-justify: inter-word;
+  white-space: normal;
+  word-break: break-word;
+  padding-right: 10px;
+  font-family: "Ancizar Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.scroll-char-fade .word {
+  white-space: nowrap;
+  display: inline-block;
+}
+.scroll-char-fade .word span {
+  display: inline-block;
+  opacity: 0.05;
+  transition: opacity 0.3s ease-out;
+  color: black;
+}
+
+
+

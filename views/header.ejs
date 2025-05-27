@@ -1,0 +1,19 @@
+<% if (user) { %>
+  <div class="text-end px-4 py-2 bg-dark-subtle">
+    <span class="fw-bold text-primary">Hello, <%= user.email.split('@')[0] %></span>
+    <a href="/logout" class="btn btn-outline-dark btn-sm ms-2">Logout</a>
+  </div>
+<% } %>
+
+  <header>
+    <div class="container-fluid bg-dark-subtle mb-4">
+      <div class="col-sm-8 mx-auto text-center py-4">
+        <h1 class="display-6">
+          <%= title || "Casecus Page" %>
+        </h1>
+        <p class="lead">
+          <%= subtitle || "Welcome to Casecus" %>
+        </p>
+      </div>
+    </div>
+  </header>
